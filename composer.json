@@ -5,7 +5,7 @@
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/INTER-msyk/dropbox-api-shortlivedtoken"
+      "url": "https://github.com/msyk/dropbox-api-shortlivedtoken"
     }
   ],
   "minimum-stability": "dev",
@@ -32,8 +32,8 @@
     }
   ],
   "support": {
-    "source": "https://github.com/INTER-msyk/dropbox-api-shortlivedtoken",
-    "manual": "https://github.com/INTER-msyk/dropbox-api-shortlivedtoken"
+    "source": "https://github.com/msyk/dropbox-api-shortlivedtoken",
+    "manual": "https://github.com/msyk/dropbox-api-shortlivedtoken"
   },
   "scripts": {
     "test": [
