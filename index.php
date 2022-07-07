@@ -4,6 +4,8 @@ namespace msyk\DropboxAPIShortLivedToken;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+use msyk\DropboxAPIShortLivedToken\AutoRefreshingDropBoxTokenService;
+
 // Check the existence of the credentials.php file, and include it.
 $credFile = __DIR__ . '/credentials.php';
 if (!file_exists($credFile)) {
@@ -16,25 +18,9 @@ require_once $credFile;
 use Spatie\Dropbox\Client;
 
 try {
-    // Get the access token from refresh token. Referred from https://www.softel.co.jp/blogs/tech/archives/7067
-    $data = http_build_query(['grant_type' => 'refresh_token', 'refresh_token' => $refreshToken,], '', '&');
-    $options = [
-        'http' => [
-            'ignore_errors' => true, 'method' => 'POST',
-            'header' => [
-                'Content-type: application/x-www-form-urlencoded',
-                'Authorization: Basic ' . base64_encode($appKey . ':' . $appSecret),
-            ],
-            'content' => $data,
-        ],
-    ];
-    $context = stream_context_create($options);
-    $response = json_decode(file_get_contents('https://api.dropbox.com/oauth2/token', false, $context));
-    $accessKey = $response->access_token;
-    ////////////////////////////////////////////////
-
+    $tokenProvider = new AutoRefreshingDropBoxTokenService($refreshToken, $appKey, $appSecret);
     // List the items on the root of your dropbox with spatie/dropbox-api
-    $client = new Client($accessKey);
+    $client = new Client($tokenProvider);
     $list = $client->listFolder("/");
 } catch (\Exception $ex) {
     var_export($ex->getMessage()); // Very simple output.

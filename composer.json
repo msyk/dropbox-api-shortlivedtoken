@@ -1,6 +1,6 @@
 {
   "name": "msyk/dropbox-api-shortlivedtoken",
-  "version": "1",
+  "version": "2",
   "time": "2022-07-07",
   "repositories": [
     {
@@ -42,5 +42,10 @@
     "clear": [
       "rm -rf node_modules vendor"
     ]
+  },
+  "autoload": {
+    "psr-4": {
+      "msyk\\DropboxAPIShortLivedToken\\": "src/"
+    }
   }
 }
