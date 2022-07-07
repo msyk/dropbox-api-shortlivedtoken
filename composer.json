@@ -1,0 +1,46 @@
+{
+  "name": "msyk/dropbox-api-shortlivedtoken",
+  "version": "1",
+  "time": "2022-07-07",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/INTER-msyk/dropbox-api-shortlivedtoken"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.1.0",
+    "spatie/dropbox-api": "*"
+  },
+  "autoload": {},
+  "description": "Sample implementation of generating access token from refresh token.",
+  "type": "application",
+  "keywords": [
+    "Dropbox",
+    "Dropbox API",
+    "php",
+    "OAuth2"
+  ],
+  "homepage": "https://github.com/msyk/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Masayuki Nii",
+      "homepage": "https://msyk.net/"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/INTER-msyk/dropbox-api-shortlivedtoken",
+    "manual": "https://github.com/INTER-msyk/dropbox-api-shortlivedtoken"
+  },
+  "scripts": {
+    "test": [
+      "The software test is very important activity for the quality assuarance."
+    ],
+    "clear": [
+      "rm -rf node_modules vendor"
+    ]
+  }
+}
