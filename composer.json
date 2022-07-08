@@ -1,7 +1,7 @@
 {
   "name": "msyk/dropbox-api-shortlivedtoken",
-  "version": "3",
-  "time": "2022-07-07",
+  "version": "4",
+  "time": "2022-07-08",
   "repositories": [
     {
       "type": "git",

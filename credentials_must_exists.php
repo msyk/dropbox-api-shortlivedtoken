@@ -6,3 +6,7 @@
 $appKey = 'Your App Key';
 $appSecret = 'Your App Secret';
 $refreshToken = 'Your Refrech Token';
+
+// The short-lived access token is going to store this file.
+// This file must be writable for the web server process, also care for security.
+$tokenFilePath = "/tmp/access_token.txt";
