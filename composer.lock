@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a143458f9691a405e0ffff9381dce9cb",
+    "content-hash": "f3960d4550a86277f020b49fc1e84e6e",
     "packages": [
         {
             "name": "graham-campbell/guzzle-factory",
